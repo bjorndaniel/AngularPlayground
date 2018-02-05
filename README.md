@@ -10,7 +10,7 @@ To run the projects:
 ## jsonplaceholder-test
     - cd into jsonplaceholder-test
     - run npm install
-    - install the bootstrap header using npm install bootstrap-header-0.0.0.tgz
+    - install the bootstrap header using npm install ../bootstrap-header-0.0.0.tgz
     - run ng serve --port "some portnumber"
     
 ## bootstrap-header 
