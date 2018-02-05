@@ -1,13 +1,14 @@
 # AngularPlayground
 
 To run the projects: 
-##CoreBackend 
-- run **dotnet run** or **dotnet watch run** to reload on change
-##jsonplaceholder-test
+
+## CoreBackend 
+    - run **dotnet run** or **dotnet watch run** to reload on change
+## jsonplaceholder-test
     - run **npm install**
     - install the bootstrap header using **npm install bootstrap-header-0.0.0.tgz**
     - run **ng serve --port "some portnumber"**
-##bootstrap-header 
+## bootstrap-header 
     - run **npm install**
     - run **ng serve --port "some portnumber"**
 
