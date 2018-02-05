@@ -1,0 +1,16 @@
+<div class="starter-template">
+  <h1>Photos</h1>
+  <p *ngIf="isBusy"><i>Loading photos...</i></p>
+  <table>
+    <thead>
+      <th>Preview</th>
+      <th>Title</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let photo of photos">
+        <td><img src="{{photo.thumbnailUrl}}" /></td>
+        <td>{{photo.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

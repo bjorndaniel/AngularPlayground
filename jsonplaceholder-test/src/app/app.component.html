@@ -1,0 +1,6 @@
+<app-navbar (navigate)="navigate($event)" (search)="search($event)"></app-navbar>
+<div class="container">
+  <app-home *ngIf="selectedPage === 1" [searchString]="searchString"></app-home>
+  <app-albums *ngIf="selectedPage === 2"></app-albums>
+  <app-photos *ngIf="selectedPage === 3"></app-photos>
+</div>

@@ -1,0 +1,11 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+body {
+  padding-top: 80px;
+}
+.starter-template {
+   padding: 3rem 1.5rem;
+   text-align: center;
+}
+td, th {
+  text-align: left;
+}
