@@ -12,6 +12,6 @@ To run the projects:
     - run **ng serve --port "some portnumber"**
 
 To build the bootstrap-header after changes:
-    - run **ng packagr**
+    - run **npm run packagr**
     - cd into the dist folder
     - run **npm pack**, this will create a new .tgz file with the version number from packge.json
