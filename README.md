@@ -3,12 +3,18 @@
 To run the projects: 
 
 ## CoreBackend 
+    - cd into CoreBackend
+    - run dotnet restore
     - run dotnet run or dotnet watch run to reload on change
+    
 ## jsonplaceholder-test
+    - cd into jsonplaceholder-test
     - run npm install
     - install the bootstrap header using npm install bootstrap-header-0.0.0.tgz
     - run ng serve --port "some portnumber"
+    
 ## bootstrap-header 
+    - cd into bootstrap-header
     - run npm install
     - run ng serve --port "some portnumber"
 
