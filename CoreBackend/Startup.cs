@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoreBackend.SignalR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +27,7 @@ namespace CoreBackend
         {
             services.AddCors();
             services.AddMvc();
+            services.AddSignalR();
             services.AddSwaggerGen(c => 
             {
                 c.SwaggerDoc("v1", new Info{Title = "Fancy file api", Version = "v1"});
@@ -48,6 +50,9 @@ namespace CoreBackend
                 .AllowAnyHeader()
             );
             app.UseMvc();
+            app.UseSignalR(routes => {
+                routes.MapHub<TestHub>("test");
+            });
             app.UseSwagger();
             app.UseSwaggerUI(c => 
             {

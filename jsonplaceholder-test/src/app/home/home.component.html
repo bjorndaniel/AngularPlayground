@@ -1,6 +1,32 @@
 <div class="starter-template">
-  <h1>Bootstrap starter template</h1>
+  <h1>Angular playground</h1>
   <p class="lead">Search string is {{searchString}}</p>
   <button (click)="download(FileType.Pdf)" class="btn btn-primary">Download pdf</button>
   <button (click)="download(FileType.Excel)" class="btn btn-primary">Download excel</button>
+  <br />
+  <h2>Send a message:</h2>
+  <form class="form" (ngSubmit)="sendMessage()" #messageForm="ngForm">
+    <div class="form-group">
+      <label class="sr-only" for="message">Message</label>
+      <input type="text" class="form-control" id="message" placeholder="your message..." name="message" [(ngModel)]="message" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!messageForm.valid">Send SignalR Message</button>
+  </form>
+  <div class="table-responsive" *ngIf="messages.length > 0">
+    <table class=" table table-striped ">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Messages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let message of messages; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{message}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <span *ngIf="messages.length <=0 ">No messages</span>
 </div>
