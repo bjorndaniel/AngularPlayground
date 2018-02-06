@@ -12,26 +12,26 @@ namespace CoreBackend.Controllers
     {
         [HttpGet]
         [Route("pdf")]
-        public ActionResult Pdf()
+        public async Task<ActionResult> Pdf()
         {
             var file = new FileInfo("Test.pdf");
             var data = new byte[file.Length];
             using (var stream = file.Open(FileMode.Open))
             {
-                stream.Read(data, 0, data.Length);
+               await stream.ReadAsync(data, 0, data.Length);
             }
             return File(data, "application/pdf", file.Name);
         }
 
         [HttpGet]
         [Route("excel")]
-        public ActionResult Excel()
+        public async Task<ActionResult> Excel()
         {
             var file = new FileInfo("Book1.xlsx");
             var data = new byte[file.Length];
             using (var stream = file.Open(FileMode.Open))
             {
-                stream.Read(data, 0, data.Length);
+                await stream.ReadAsync(data, 0, data.Length);
             }
             return File(data, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", file.Name);
         }
